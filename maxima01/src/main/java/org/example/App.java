@@ -12,7 +12,6 @@ public class App
 
      int res = a;
      a = b;
-     b = a;
      b = res;
 
 
