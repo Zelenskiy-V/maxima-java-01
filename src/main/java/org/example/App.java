@@ -1,13 +1,23 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
-public class App 
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        int a=10;
+        int b=30;
+        System.out.println("исходный");
+        System.out.println(a);
+        System.out.println(b);
+
+        int res = a;
+        a = b;
+        b = res;
+
+        System.out.println("обработано");
+        System.out.println(a);
+        System.out.println(res);
+
     }
 }
