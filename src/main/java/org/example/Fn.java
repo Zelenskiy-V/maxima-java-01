@@ -2,7 +2,7 @@ package org.example;
 
 public class Fn {
     public static void main(String[] args) {
-        System.out.println(fibonazzi((byte) 45 ));
+        System.out.println(fibonazzi((byte) 45));
     }
 
     public static long fibonazzi(byte n) {
