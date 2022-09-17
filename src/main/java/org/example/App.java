@@ -6,12 +6,12 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(daysCount((byte) 2, 2020));
+        System.out.println(daysCount((byte)2, 2024));
 
     }
 
-    public static String daysCount(byte month, int year) {
-        String result = "";
+    public static byte daysCount(byte month, int year) {
+        byte result=0;
         switch (month) {
             case 1:
             case 3:
@@ -20,26 +20,19 @@ public class App {
             case 8:
             case 10:
             case 12:
-                result = "31";
+                result  = 31;
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                result = "30";
+                result = 30;
                 break;
             case 2:
-                if (isYearVes(year)){
-                    result = "29";
-                    break;
-                } else {
-                    result ="28";
-                    break;
-                }
+                result= isYearVes(year) ? (byte) 29: (byte) 28;
         }
-        return "В месяце " + month + " года " + year + " " + result + " дней" ;
+        return result;
     }
-
     public static boolean isYearVes(int year) {
         return (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0);
     }
@@ -47,7 +40,4 @@ public class App {
 
 
 }
-
-
-
 
